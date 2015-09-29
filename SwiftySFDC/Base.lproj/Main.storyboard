@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="SwiftySFDC" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,8 +15,60 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter SF Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EaF-1d-S16">
+                                <rect key="frame" x="207" y="57" width="187" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Qy1-oz-0Wy"/>
+                                    <constraint firstAttribute="width" constant="187" id="rgO-Bq-CNQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zVm-1P-Ufz">
+                                <rect key="frame" x="200" y="180" width="200" height="30"/>
+                                <color key="backgroundColor" red="0.56862745100000001" green="0.56862745100000001" blue="0.56862745100000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="C8W-aN-Cd4"/>
+                                    <constraint firstAttribute="width" constant="200" id="Tir-9l-le9"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="gBN-Go-5XP"/>
+                                </constraints>
+                                <state key="normal" title="Login With SFDC">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnLoginPressed:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="PPv-CT-8Rq"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter SF Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nEl-8r-Ee5">
+                                <rect key="frame" x="207" y="109" width="187" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="30" id="fBK-YW-QO6"/>
+                                    <constraint firstAttribute="width" constant="187" id="tQq-vp-3MU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nEl-8r-Ee5" firstAttribute="height" secondItem="EaF-1d-S16" secondAttribute="height" id="5So-YK-Wai"/>
+                            <constraint firstItem="nEl-8r-Ee5" firstAttribute="leading" secondItem="EaF-1d-S16" secondAttribute="leading" id="Jjd-gR-23j"/>
+                            <constraint firstItem="zVm-1P-Ufz" firstAttribute="centerX" secondItem="nEl-8r-Ee5" secondAttribute="centerX" id="N8F-9f-s41"/>
+                            <constraint firstItem="EaF-1d-S16" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="S71-2m-Lej"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="zVm-1P-Ufz" secondAttribute="bottom" priority="250" constant="390" id="Twt-yM-b3a"/>
+                            <constraint firstItem="nEl-8r-Ee5" firstAttribute="top" secondItem="EaF-1d-S16" secondAttribute="bottom" constant="22" id="UJ4-SU-NAc"/>
+                            <constraint firstItem="nEl-8r-Ee5" firstAttribute="trailing" secondItem="EaF-1d-S16" secondAttribute="trailing" id="aMY-QD-JO3"/>
+                            <constraint firstItem="zVm-1P-Ufz" firstAttribute="top" secondItem="nEl-8r-Ee5" secondAttribute="bottom" constant="41" id="fL5-4W-gSW"/>
+                            <constraint firstItem="EaF-1d-S16" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="37" id="fWn-5w-8kl"/>
+                            <constraint firstItem="nEl-8r-Ee5" firstAttribute="width" secondItem="EaF-1d-S16" secondAttribute="width" id="pif-GA-veE"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="txtfSFPassword" destination="nEl-8r-Ee5" id="E6N-b5-owc"/>
+                        <outlet property="txtfSFUsername" destination="EaF-1d-S16" id="cSz-l3-MC4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
